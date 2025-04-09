@@ -1,0 +1,96 @@
+Error fetching Polygon realtime data for AAPL: 403, message='Forbidden', url='https://api.polygon.io/v2/last/trade/AAPL?apiKey=Z_H6ZHdpqd9sYTSCkbcnFm3EAfq0zjpI'
+Polygon API error: 403, message='Forbidden', url='https://api.polygon.io/v2/last/trade/AAPL?apiKey=Z_H6ZHdpqd9sYTSCkbcnFm3EAfq0zjpI', URL: https://api.polygon.io/v2/last/trade/AAPL
+Polygon API authentication failed. Please check your API key.
+Error fetching Polygon realtime data for AAPL: 403, message='Forbidden', url='https://api.polygon.io/v2/last/trade/AAPL?apiKey=Z_H6ZHdpqd9sYTSCkbcnFm3EAfq0zjpI'
+Polygon API error: 403, message='Forbidden', url='https://api.polygon.io/v2/last/trade/AAPL?apiKey=Z_H6ZHdpqd9sYTSCkbcnFm3EAfq0zjpI', URL: https://api.polygon.io/v2/last/trade/AAPL
+Polygon API authentication failed. Please check your API key.
+Error fetching Polygon realtime data for AAPL: 403, message='Forbidden', url='https://api.polygon.io/v2/last/trade/AAPL?apiKey=Z_H6ZHdpqd9sYTSCkbcnFm3EAfq0zjpI'
+Polygon API error: 403, message='Forbidden', url='https://api.polygon.io/v2/last/trade/AAPL?apiKey=Z_H6ZHdpqd9sYTSCkbcnFm3EAfq0zjpI', URL: https://api.polygon.io/v2/last/trade/AAPL
+Polygon API authentication failed. Please check your API key.
+Error fetching Polygon realtime data for AAPL: 403, message='Forbidden', url='https://api.polygon.io/v2/last/trade/AAPL?apiKey=Z_H6ZHdpqd9sYTSCkbcnFm3EAfq0zjpI'
+Polygon API error: 403, message='Forbidden', url='https://api.polygon.io/v2/last/trade/GOOGL?apiKey=Z_H6ZHdpqd9sYTSCkbcnFm3EAfq0zjpI', URL: https://api.polygon.io/v2/last/trade/GOOGL
+Polygon API authentication failed. Please check your API key.
+Error fetching Polygon realtime data for GOOGL: 403, message='Forbidden', url='https://api.polygon.io/v2/last/trade/GOOGL?apiKey=Z_H6ZHdpqd9sYTSCkbcnFm3EAfq0zjpI'
+Polygon API error: 403, message='Forbidden', url='https://api.polygon.io/v2/last/trade/MSFT?apiKey=Z_H6ZHdpqd9sYTSCkbcnFm3EAfq0zjpI', URL: https://api.polygon.io/v2/last/trade/MSFT
+Polygon API authentication failed. Please check your API key.
+Error fetching Polygon realtime data for MSFT: 403, message='Forbidden', url='https://api.polygon.io/v2/last/trade/MSFT?apiKey=Z_H6ZHdpqd9sYTSCkbcnFm3EAfq0zjpI'
+Polygon API error: 403, message='Forbidden', url='https://api.polygon.io/v2/last/trade/AAPL?apiKey=Z_H6ZHdpqd9sYTSCkbcnFm3EAfq0zjpI', URL: https://api.polygon.io/v2/last/trade/AAPL
+Polygon API authentication failed. Please check your API key.
+Error fetching Polygon realtime data for AAPL: 403, message='Forbidden', url='https://api.polygon.io/v2/last/trade/AAPL?apiKey=Z_H6ZHdpqd9sYTSCkbcnFm3EAfq0zjpI'
+Financial Datasets API error: 404, message='Not Found', url='https://api.financialdatasets.ai/news/company?ticker=AAPL&limit=5', URL: https://api.financialdatasets.ai/news/company
+Error fetching Financial Datasets news for AAPL: 404, message='Not Found', url='https://api.financialdatasets.ai/news/company?ticker=AAPL&limit=5'
+Financial Datasets API error: 404, message='Not Found', url='https://api.financialdatasets.ai/news/company?ticker=AAPL&limit=5', URL: https://api.financialdatasets.ai/news/company
+Error fetching Financial Datasets news for AAPL: 404, message='Not Found', url='https://api.financialdatasets.ai/news/company?ticker=AAPL&limit=5'
+Financial Datasets API error: 404, message='Not Found', url='https://api.financialdatasets.ai/news/company?ticker=AAPL&limit=5', URL: https://api.financialdatasets.ai/news/company
+Error fetching Financial Datasets news for AAPL: 404, message='Not Found', url='https://api.financialdatasets.ai/news/company?ticker=AAPL&limit=5'
+Error during multi-agent analysis for AAPL: Expecting value: line 1 column 1 (char 0)
+Traceback: Traceback (most recent call last):
+  File "/Users/appleowner/Desktop/Swarms-financial-agent/main_analysis.py", line 95, in real_time_analysis
+    analysis = agent_system.run(input_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/appleowner/Desktop/Swarms-financial-agent/agents/agents.py", line 105, in run
+    stock_analysis = stock_agent.run(task)
+                     ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/appleowner/Desktop/Swarms-financial-agent/venv/lib/python3.11/site-packages/swarms/structs/agent.py", line 2499, in run
+    self._handle_run_error(e)
+  File "/Users/appleowner/Desktop/Swarms-financial-agent/venv/lib/python3.11/site-packages/swarms/structs/agent.py", line 1174, in _handle_run_error
+    raise error
+  File "/Users/appleowner/Desktop/Swarms-financial-agent/venv/lib/python3.11/site-packages/swarms/structs/agent.py", line 2494, in run
+    return str_to_dict(output)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/appleowner/Desktop/Swarms-financial-agent/venv/lib/python3.11/site-packages/swarms/utils/str_to_dict.py", line 27, in str_to_dict
+    raise e  # Raise the error if all retries fail
+    ^^^^^^^
+  File "/Users/appleowner/Desktop/Swarms-financial-agent/venv/lib/python3.11/site-packages/swarms/utils/str_to_dict.py", line 22, in str_to_dict
+    return json.loads(s)
+           ^^^^^^^^^^^^^
+  File "/Users/appleowner/anaconda3/lib/python3.11/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/appleowner/anaconda3/lib/python3.11/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/appleowner/anaconda3/lib/python3.11/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+Financial Datasets API error: 404, message='Not Found', url='https://api.financialdatasets.ai/news/company?ticker=AAPL&limit=5', URL: https://api.financialdatasets.ai/news/company
+Error fetching Financial Datasets news for AAPL: 404, message='Not Found', url='https://api.financialdatasets.ai/news/company?ticker=AAPL&limit=5'
+Financial Datasets API error: 404, message='Not Found', url='https://api.financialdatasets.ai/news/company?ticker=AAPL&limit=5', URL: https://api.financialdatasets.ai/news/company
+Error fetching Financial Datasets news for AAPL: 404, message='Not Found', url='https://api.financialdatasets.ai/news/company?ticker=AAPL&limit=5'
+Financial Datasets API error: 404, message='Not Found', url='https://api.financialdatasets.ai/news/company?ticker=AAPL&limit=5', URL: https://api.financialdatasets.ai/news/company
+Error fetching Financial Datasets news for AAPL: 404, message='Not Found', url='https://api.financialdatasets.ai/news/company?ticker=AAPL&limit=5'
+Error during individual agent analysis: Expecting value: line 1 column 1 (char 0)
+Traceback: Traceback (most recent call last):
+  File "/Users/appleowner/Desktop/Swarms-financial-agent/test_agent_system.py", line 81, in test_agent_with_fin_data
+    stock_analysis = stock_agent.run(input_data)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/appleowner/Desktop/Swarms-financial-agent/venv/lib/python3.11/site-packages/swarms/structs/agent.py", line 2499, in run
+    self._handle_run_error(e)
+  File "/Users/appleowner/Desktop/Swarms-financial-agent/venv/lib/python3.11/site-packages/swarms/structs/agent.py", line 1174, in _handle_run_error
+    raise error
+  File "/Users/appleowner/Desktop/Swarms-financial-agent/venv/lib/python3.11/site-packages/swarms/structs/agent.py", line 2494, in run
+    return str_to_dict(output)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/appleowner/Desktop/Swarms-financial-agent/venv/lib/python3.11/site-packages/swarms/utils/str_to_dict.py", line 27, in str_to_dict
+    raise e  # Raise the error if all retries fail
+    ^^^^^^^
+  File "/Users/appleowner/Desktop/Swarms-financial-agent/venv/lib/python3.11/site-packages/swarms/utils/str_to_dict.py", line 22, in str_to_dict
+    return json.loads(s)
+           ^^^^^^^^^^^^^
+  File "/Users/appleowner/anaconda3/lib/python3.11/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/appleowner/anaconda3/lib/python3.11/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/appleowner/anaconda3/lib/python3.11/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+Error running agents: Expecting value: line 1 column 1 (char 0)
+Error running agent StockAgent: 'LiteLLM' object has no attribute 'generate'
+Error running agent MarketAgent: 'LiteLLM' object has no attribute 'generate'
+Error running agent MacroAgent: 'LiteLLM' object has no attribute 'generate'
+Error running agent NewsAgent: 'LiteLLM' object has no attribute 'generate'
+Error running agent InvestmentAgent: 'LiteLLM' object has no attribute 'generate'
