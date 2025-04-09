@@ -125,3 +125,4 @@ dmypy.json
 *.swo
 logs/
 custom_rearrange/
+outputs/
