@@ -57,7 +57,7 @@ async def test_agent_with_fin_data():
         # Create an aiohttp session for making API requests
         async with aiohttp.ClientSession() as session:
             # Get the ticker from environment or use a default
-            ticker = os.getenv("TEST_TICKER", "NVDA")
+            ticker = os.getenv("TEST_TICKER", "AAPL")
             logger.info(f"Testing with ticker: {ticker}")
             
             # Fetch data from Financial Datasets API
