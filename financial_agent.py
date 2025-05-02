@@ -8,7 +8,6 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 from swarms import Agent, AgentRearrange
-from swarm_models import OpenAIChat
 import logging
 from dotenv import load_dotenv
 import asyncio

@@ -1,14 +1,17 @@
-# Swarms Financial Agent
+# Sam Butler Investment Agency - Financial Analysis System
 
-A multi-agent financial analysis system built with the Swarms framework. This system combines specialized AI agents to analyze stocks, market conditions, economic indicators, and financial news in real-time to provide investment recommendations.
+A professional multi-agent financial analysis system built with the Swarms framework. This system emulates a real investment firm structure with specialized AI agents taking on professional roles to analyze stocks, market conditions, economic indicators, and financial news in real-time to provide comprehensive investment recommendations and generate professionally branded reports.
 
 ## Features
 
-- Real-time stock data analysis using Financial Datasets API
-- Multi-agent system with specialized agents for different aspects of financial analysis
+- Multi-stock portfolio analysis with efficient token management
+- Professional PDF report generation with Sam Butler Investment Agency branding
+- Visualizations including price charts and comparative performance analysis
+- Real-time stock data analysis using YFinance and Financial Datasets API
+- Multi-agent system with specialized professional roles for different aspects of financial analysis
 - Custom agent flow implementation for reliable output handling
 - Comprehensive financial insights combining stock, market, economic, and news analysis
-- Final investment recommendation (BUY/SELL/HOLD) with expected returns
+- Final investment recommendation (BUY/SELL/HOLD) with expected returns and portfolio allocation advice
 
 ## Setup
 
@@ -18,6 +21,7 @@ A multi-agent financial analysis system built with the Swarms framework. This sy
 - API keys for:
   - OpenAI API (for the AI agents)
   - Financial Datasets API (for market data)
+  - FRED API (for economic data)
 
 ### Installation
 
@@ -29,18 +33,27 @@ A multi-agent financial analysis system built with the Swarms framework. This sy
 
 2. Install dependencies:
    ```
-   pip install -U swarms pandas numpy matplotlib aiohttp
+   pip install -r requirements.txt
+   ```
+   
+   Or manually install:
+   ```
+   pip install -U swarms pandas numpy matplotlib aiohttp yfinance fredapi ratelimit reportlab seaborn fpdf
    ```
 
 3. Create a `.env` file with your API keys:
    ```
    OPENAI_API_KEY=your_openai_api_key
    FIN_DATA_API_KEY=your_financial_datasets_api_key
+   FRED_API_KEY=your_fred_api_key
+   SEC_API_KEY=your_sec_api_key
    ```
 
 ## Usage
 
-Run the test script to analyze a stock:
+### Single Stock Analysis
+
+Run the test script to analyze a single stock:
 
 ```
 python test_agent_system.py
@@ -52,29 +65,63 @@ You can set the stock ticker to analyze by setting the `TEST_TICKER` environment
 TEST_TICKER=MSFT python test_agent_system.py
 ```
 
+### Multi-Stock Portfolio Analysis with PDF Reports
+
+The primary workflow for full portfolio analysis with token-efficient processing:
+
+```
+python efficient_multi_stock.py --tickers "AAPL,MSFT,TSLA,AMZN,NVDA"
+```
+
+This will:
+1. Process each stock independently through the full agent pipeline
+2. Generate price charts and visualizations for each stock
+3. Aggregate the investment recommendations into a comprehensive portfolio strategy
+4. Create a professional, branded PDF report with Sam Butler Investment Agency formatting
+
+Output files are stored in:
+- `outputs/` - Text analysis from each agent for each stock
+- `outputs/charts/` - Stock price and performance charts
+- `outputs/reports/` - Final PDF investment reports
+
 ## System Architecture
 
 ### Data Sources
-- **Financial Datasets API**: Real-time prices, historical data, and financial news
+- **YFinance API**: Real-time prices and historical data
+- **Financial Datasets API**: Financial news and additional market data
+- **FRED API**: Economic indicator data
 
-### Agent System
-- **StockAgent**: Analyzes individual stock performance and trends
-- **MarketAgent**: Analyzes overall market conditions and their impact on the stock
-- **MacroAgent**: Analyzes macroeconomic indicators and their influence
-- **NewsAgent**: Analyzes financial news and their market impact
-- **InvestmentAgent**: Provides final investment recommendation based on all analyses
+### Professional Agent Structure
+The system emulates a professional investment firm with specialized roles:
 
-The agents work in a sequential flow, with each agent building upon the analysis of the previous ones.
+- **Senior Equity Analyst (StockAgent)**: Conducts detailed technical and fundamental stock analysis
+- **Head of Market Strategy (MarketAgent)**: Analyzes overall market conditions and sector trends
+- **Chief Economist (MacroAgent)**: Evaluates macroeconomic indicators and policy impacts
+- **Director of Financial Intelligence (NewsAgent)**: Analyzes news sentiment and market-moving events
+- **Senior Portfolio Manager (InvestmentAgent)**: Provides actionable investment recommendations
+- **Chief Investment Officer (ReportAggregationAgent)**: Synthesizes analyses into cohesive portfolio strategy
 
-### Custom Agent Flow
+### Visual Report Generation
 
-The system implements a custom agent flow to handle the output between agents properly:
+The system generates professional investment reports:
 
-1. Each agent is run individually using the `run_agent_safely` function
-2. Outputs from previous agents are explicitly passed to subsequent agents
-3. All analyses are combined into a comprehensive final output
+- **Stock Visualizations**: Price charts with moving averages and volume analysis
+- **Comparative Analysis**: Performance benchmarking across portfolio holdings
+- **Portfolio Recommendations**: Clear, visual summary of buy/sell/hold advice
+- **Branded PDF Reports**: Professional formatting with Sam Butler Investment Agency branding
 
-This approach bypasses JSON parsing issues in the standard Swarms flow mechanism while still leveraging the specialized agent capabilities.
+### Token-Efficient Processing
+
+The system uses two approaches for handling multiple stocks:
+
+1. **Token-optimized multi-stock analysis (`efficient_multi_stock.py`)**:
+   - Processes each stock independently through the agent pipeline
+   - Avoids context accumulation that would exceed token limits
+   - Only aggregates at the final report stage
+
+2. **Context-preserving analysis (`multi_stock_analysis.py`)**:
+   - Preserves full context between agents but may reach token limits with many stocks
+   - Better for detailed analysis of 2-3 stocks where relationships matter
 
 ## Implementation Details
 
@@ -82,19 +129,22 @@ This approach bypasses JSON parsing issues in the standard Swarms flow mechanism
 
 The system uses a custom approach to handle agent outputs:
 - Each agent uses `output_type="string"` for consistent output format
+- Structured markdown formatting ensures consistent parsing for visualizations
 - A custom output cleaner ensures valid string formatting
-- The `run_agent_safely` function directly accesses the agent's internal methods to bypass JSON parsing issues
 
 ### Error Handling
 
-The system includes comprehensive error handling for API calls and agent operations, with detailed logging to help diagnose issues.
+The system includes comprehensive error handling for API calls and agent operations:
+- Graceful handling of connection errors with the OpenAI API
+- Fallback mechanisms for missing or invalid API keys
+- Continued execution even when errors occur with individual stocks
 
-## API Integration
+### Data Visualization
 
-The system uses the Financial Datasets API (financialdatasets.ai) for retrieving:
-- Real-time price snapshots for stocks
-- Historical price data with customizable intervals
-- Recent news articles for a given ticker
+The system generates several types of visualizations:
+- Individual stock price charts with moving averages
+- Comparative performance charts normalizing multiple stocks to a common base
+- Recommendation summary charts visualizing the buy/sell/hold advice
 
 ## License
 

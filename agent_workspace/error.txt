@@ -94,3 +94,10 @@ Error running agent MarketAgent: 'LiteLLM' object has no attribute 'generate'
 Error running agent MacroAgent: 'LiteLLM' object has no attribute 'generate'
 Error running agent NewsAgent: 'LiteLLM' object has no attribute 'generate'
 Error running agent InvestmentAgent: 'LiteLLM' object has no attribute 'generate'
+Error generating report: "Style 'BodyText' already defined in stylesheet"
+Error generating portfolio report: "Style 'BodyText' already defined in stylesheet"
+Failed to generate PDF report.
+Error analyzing AAPL: write() argument must be str, not None
+Error analyzing AAPL: write() argument must be str, not None
+Error analyzing AAPL: write() argument must be str, not None
+Error analyzing AAPL: write() argument must be str, not None

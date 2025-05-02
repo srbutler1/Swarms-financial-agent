@@ -126,3 +126,13 @@ dmypy.json
 logs/
 custom_rearrange/
 outputs/
+error.txt
+agent_workspace/prompts/*.json
+venv_x86_64_backup
+venv_x86_64_backup
+venv_arm64
+venv
+error.txt
+*.txt
+
+
